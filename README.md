@@ -1,5 +1,13 @@
 # etch-a-sketch
-The Odin Project - Foundation Course
+A project from [The Odin Project - Foundation Course] (https://www.theodinproject.com/courses/foundations/lessons/etch-a-sketch-project)
+
+# Live Preview
+
+# Learning Outcomes
+  - Deepened knowledge of DOM and its manipulation.
+  - Improved CSS Grid understanding and usage.
+  - Improved code structure and code readability.
+  - Improved clean code writing.
 
 # Goals
 Build a browser version of something between a sketchpad and an Etch-A-Sketch.
@@ -12,11 +20,21 @@ Steps to make it happen:
   5. Change hover effect so each pass adds 10% of black to square divs color.
 
 # Problem Solving
-## UNDERSTANDING THE PROBLEM
+## Understanding the problem
+The first thing I need to do in the HTML file is to create a div for the grid. This div will be the container for the square divs. 
+Then with js I will create a div with class "square". 
+With CSS I will format this class by making it a square (same length and width) and adding a border to it. I also will have to set all margins to 0px. 
+Once I have the square div formatted I have to create the 16x16 grid. 
+The first option I can think of to do it is through a for loop.
+I have to research CSS grid option.
 
-## PLAN
+## Plan
+  1. Create container div in HTML
+  2. Create square div with js
+  3. Format square div with css
+  4. 
 
-## PSEUDOCODE
+## Pseudocode
 
 
 # Self-check
