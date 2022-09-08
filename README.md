@@ -1,5 +1,5 @@
 # etch-a-sketch
-A project from [The Odin Project - Foundation Course] (https://www.theodinproject.com/courses/foundations/lessons/etch-a-sketch-project)
+A project from [The Odin Project - Foundation Course](https://www.theodinproject.com/courses/foundations/lessons/etch-a-sketch-project)
 
 # Live Preview
 
