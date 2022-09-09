@@ -1,8 +1,9 @@
 const grid = document.getElementById('grid');
 
-const sq = document.createElement('div');
-
-sq.classList.add('square');
-
-grid.appendChild(sq);
+for(let i=0; i<9; i++) {
+    const square = document.createElement('div');
+    square.className = "square";
+    grid.appendChild(square);
+    console.log(i);
+}
 
