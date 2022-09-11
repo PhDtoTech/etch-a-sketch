@@ -1,9 +1,21 @@
 const grid = document.getElementById('grid');
 
 for(let i=0; i<256; i++) {
-    const square = document.createElement('div');
-    square.className = "square";
-    grid.appendChild(square);
-    console.log(i);
+    const box = document.createElement('div');
+    box.className = "square";
+    grid.appendChild(box);
 }
 
+const squares = document.querySelectorAll('.square');
+
+squares.forEach(square => {
+  square.addEventListener('mouseover', () => {
+    square.classList.add('hover');
+  });
+});
+
+
+/*box.addEventListener('mouseover', () => {
+    square.style.backgroundColor = "black";
+    square.classList.add('hover');
+  });*/
