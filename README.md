@@ -31,22 +31,28 @@ I have to research CSS grid option.
 ## Plan
   1. Create container div in HTML
   2. Create square div with js
-  3. Format square div with css
-  4. 
+  3. Style square div with css
+  4. Style square when mouse hovers over it
+  5. Create buttons panel with reset, density, and color buttons
+  6. Create reset button and add functionality with js
+    - On click, remove hover class from squares
+  7. Create density button and add functionality with js
+    - On click, 
+
 
 ## Pseudocode
 
 
 # Self-check
-- [ ] Create square divs using JavaScript.
-- [ ] Put grid squares inside another “container” div.
-- [ ] Try different ways to make divs appear as a grid.
+- [-] Create square divs using JavaScript.
+- [-] Put grid squares inside another “container” div.
+- [-] Try different ways to make divs appear as a grid.
     - [ ] float/clear
     - [ ] inline-block
-    - [ ] flexbox
-    - [ ] CSS Grid
-- [ ] Set up event listeners for when your mouse enters a div and ends when your mouse leaves it as a starting point for hovering effect.
-- [ ] Try multiple ways to change the color of the divs.
-    - [ ] add a new class to the div.
-    - [ ] change the div’s background color using JavaScript.
+    - [-] flexbox
+    - [-] CSS Grid
+- [-] Set up event listeners for when your mouse enters a div and ends when your mouse leaves it as a starting point for hovering effect.
+- [-] Try multiple ways to change the color of the divs.
+    - [-] add a new class to the div.
+    - [-] change the div’s background color using JavaScript.
 - [ ] Create a brand new grid when user inputs a number without changing the total amount of pixels used.
