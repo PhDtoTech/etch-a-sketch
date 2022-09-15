@@ -44,15 +44,15 @@ I have to research CSS grid option.
 
 
 # Self-check
-- [-] Create square divs using JavaScript.
-- [-] Put grid squares inside another “container” div.
-- [-] Try different ways to make divs appear as a grid.
+- [x] Create square divs using JavaScript.
+- [x] Put grid squares inside another “container” div.
+- [x] Try different ways to make divs appear as a grid.
     - [ ] float/clear
     - [ ] inline-block
-    - [-] flexbox
-    - [-] CSS Grid
-- [-] Set up event listeners for when your mouse enters a div and ends when your mouse leaves it as a starting point for hovering effect.
-- [-] Try multiple ways to change the color of the divs.
-    - [-] add a new class to the div.
-    - [-] change the div’s background color using JavaScript.
+    - [x] flexbox
+    - [x] CSS Grid
+- [x] Set up event listeners for when your mouse enters a div and ends when your mouse leaves it as a starting point for hovering effect.
+- [x] Try multiple ways to change the color of the divs.
+    - [x] add a new class to the div.
+    - [x] change the div’s background color using JavaScript.
 - [ ] Create a brand new grid when user inputs a number without changing the total amount of pixels used.
