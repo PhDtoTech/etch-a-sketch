@@ -13,9 +13,3 @@ squares.forEach(square => {
     square.classList.add('hover');
   });
 });
-
-
-/*box.addEventListener('mouseover', () => {
-    square.style.backgroundColor = "black";
-    square.classList.add('hover');
-  });*/
