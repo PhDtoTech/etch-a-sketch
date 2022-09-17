@@ -1,13 +1,6 @@
 // declare variable with element #grid
 const grid = document.getElementById('grid');
 
-<<<<<<< Updated upstream
-//creates 256 boxes through loop by declaring box variable, adding class "square", and appending it to grid
-for(let i=0; i<256; i++) {
-    const box = document.createElement('div');
-    box.classList.add('square');
-    grid.appendChild(box);
-=======
 // declare variable with button #density
 const densityButton = document.getElementById('density');
 
@@ -42,7 +35,6 @@ for(let i=0; i<(sideLength*sideLength); i++) {
   const box = document.createElement('div');
   box.classList.add('square');
   grid.appendChild(box);
->>>>>>> Stashed changes
 }
 
 //declare variable with original color value
