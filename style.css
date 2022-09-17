@@ -12,7 +12,7 @@ h1 {
     grid-template-rows: repeat(auto-fit, 20px);
     margin: auto;
     border-width: 4px;
-    border-color: rgb(170, 193, 121);
+    border-color: #aac179;
     border-style: solid;
     width: 320px;
     height: 320px;
