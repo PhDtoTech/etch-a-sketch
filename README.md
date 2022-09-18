@@ -33,15 +33,18 @@ I have to research CSS grid option.
   2. Create square div with js
   3. Style square div with css
   4. Style square when mouse hovers over it
-  5. Create buttons panel with reset, density, and color buttons
+  5. Create buttons panel with reset, density, and rainbow/green buttons
   6. Create reset button and add functionality with js
-    - On click, remove hover class from squares
+      - On click, change background color to white
   7. Create density button and add functionality with js
-    - On click, 
-
-
-## Pseudocode
-
+      - On click, prompt user to input side length
+      - Use side Length to create grid
+  8. Declare createGrid function using sideLength
+  9. Declare color variable and set to initial green
+  10. Declare mouseOver variable to change squares' style.backgroundColor to color
+  10. Add click event listeners to color buttons and specify color
+      - Declare randomcolor variable and set color to it when clicking rainbow button
+      - When clicking green color turns to original green
 
 # Self-check
 - [x] Create square divs using JavaScript.
@@ -55,4 +58,4 @@ I have to research CSS grid option.
 - [x] Try multiple ways to change the color of the divs.
     - [x] add a new class to the div.
     - [x] change the div’s background color using JavaScript.
-- [ ] Create a brand new grid when user inputs a number without changing the total amount of pixels used.
+- [x] Create a brand new grid when user inputs a number without changing the total amount of pixels used.
