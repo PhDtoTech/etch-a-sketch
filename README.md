@@ -2,6 +2,7 @@
 A project from [The Odin Project - Foundation Course](https://www.theodinproject.com/courses/foundations/lessons/etch-a-sketch-project)
 
 # Live Preview
+[Click here.](https://paura-mirez.github.io/etch-a-sketch/)
 
 # Learning Outcomes
   - Deepened knowledge of DOM and its manipulation.
