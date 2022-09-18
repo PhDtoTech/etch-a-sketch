@@ -16,62 +16,86 @@ const getRandomColor = () => {
   return `hsl(${h}deg, ${s}%, ${l}%)`;
 };
 
-//declare variable that represents number of squares per side of grid
-let sideLength = 16;
+//declare variable with original color value
+let color = '#aac179';
 
-// get number of squares per side of grid
+//declare variable that represents number of squares per side of grid
+let sideLength = 25;
+
+/*function to create grid: 
+1. remove all existing squares, 
+2. loop to create div, add class "square", and append it to grid
+3. change grid columns and rows style
+4. reset grid
+5. add mouseover event listener*/
+function createGrid (sideLength) {
+  const squares = document.querySelectorAll('.square');
+  squares.forEach(square => {
+    square.remove();
+  });
+
+  for(let i=0; i<(sideLength*sideLength); i++) {
+    const box = document.createElement('div');
+    box.classList.add('square');
+    grid.appendChild(box);
+  }
+
+  grid.style.gridTemplateColumns= "repeat(" + sideLength + ", 1fr)";
+  grid.style.gridTemplateRows= "repeat(" + sideLength + ", 1fr)";
+  
+  resetGrid();
+
+  mouseOver();
+
+}
+
+createGrid(sideLength);
+
+// get user input for number of squares per side of grid
 function getDensity(){
-  sideLength = (prompt("How many squares per side?"))*1;
+  sideLength = (prompt("How many squares per side? (max. 100)"))*1;
   return sideLength;
 }
 
 // add event listener on click and runs function
 densityButton.addEventListener('click', () => {
   getDensity();
+  createGrid(sideLength);
 });
-
-//create boxes based on sideLength through loop by declaring box variable, adding class "square", and appending it to grid
-for(let i=0; i<(sideLength*sideLength); i++) {
-  const box = document.createElement('div');
-  box.classList.add('square');
-  grid.appendChild(box);
-}
-
-//declare variable with original color value
-let color = '#aac179';
 
 //add reset function
 function resetGrid() {
   const squares = document.querySelectorAll('.square');
   squares.forEach(square => {
-    square.className = 'square';
     square.style.backgroundColor= 'white';
     color = '#aac179'
   });
 }
 
-//declares variable with reset button
+//declare variable with reset button
 const reset = document.getElementById('reset');
 
-//adds on click event to reset button
+//add on click event to reset button
 reset.addEventListener('click', () => {
   resetGrid();
 });
 
-//declare variable with nodelist of elements including "square" class
-const squares = document.querySelectorAll('.square');
+//declare function to add event listener when mouse is over squares
+function mouseOver () {
+  //declare variable with nodelist of elements including "square" class
+  const squares = document.querySelectorAll('.square');
 
-//add class "hover" when mouse hovers elements to each element in nodelist
-squares.forEach(square => {
-  square.addEventListener('mouseover', () => {
-    square.style.backgroundColor = color;
+  //change background color when mouse hovers elements to each element in nodelist
+  squares.forEach(square => {
+    square.addEventListener('mouseover', () => {
+      square.style.backgroundColor = color;
+    });
   });
-});
+}
 
 //pick random color when clicking rainbow button
 const rainbowButton = document.getElementById('rainbow');
 rainbowButton.addEventListener('click', () => {
-  resetGrid();
   const randomColor = getRandomColor();
   color = randomColor;
 });
@@ -79,5 +103,5 @@ rainbowButton.addEventListener('click', () => {
 //pick original green when clicking green button
 const greenButton = document.getElementById('green');
 greenButton.addEventListener('click', () => {
-    resetGrid();
+  color = '#aac179';
 });
