@@ -1,8 +1,19 @@
-// declare variable with element #grid
+// declare variables with document elements
 const grid = document.getElementById('grid');
 
-// declare variable with button #density
 const densityButton = document.getElementById('density');
+
+const resetButton = document.getElementById('reset');
+
+const randomButton = document.getElementById('random');
+
+const greenButton = document.getElementById('green');
+
+//declare variable with original color value
+let color = '#aac179';
+
+//declare variable that represents number of squares per side of grid
+let sideLength = 25;
 
 //generate random color
 const getRandomNumber = (maxNum) => {
@@ -16,11 +27,24 @@ const getRandomColor = () => {
   return `hsl(${h}deg, ${s}%, ${l}%)`;
 };
 
-//declare variable with original color value
-let color = '#aac179';
+// add event listeners to buttons
+densityButton.addEventListener('click', () => {
+  getDensity();
+  createGrid(sideLength);
+});
 
-//declare variable that represents number of squares per side of grid
-let sideLength = 25;
+resetButton.addEventListener('click', () => {
+  resetGrid();
+});
+
+randomButton.addEventListener('click', () => {
+  const randomColor = getRandomColor();
+  color = randomColor;
+});
+
+greenButton.addEventListener('click', () => {
+  color = '#aac179';
+});
 
 /*function to create grid: 
 1. remove all existing squares, 
@@ -44,12 +68,8 @@ function createGrid (sideLength) {
   grid.style.gridTemplateRows= "repeat(" + sideLength + ", 1fr)";
   
   resetGrid();
-
   mouseOver();
-
 }
-
-createGrid(sideLength);
 
 // get user input for number of squares per side of grid
 function getDensity(){
@@ -57,13 +77,7 @@ function getDensity(){
   return sideLength;
 }
 
-// add event listener on click and runs function
-densityButton.addEventListener('click', () => {
-  getDensity();
-  createGrid(sideLength);
-});
-
-//add reset function
+//declare reset function
 function resetGrid() {
   const squares = document.querySelectorAll('.square');
   squares.forEach(square => {
@@ -72,20 +86,10 @@ function resetGrid() {
   });
 }
 
-//declare variable with reset button
-const reset = document.getElementById('reset');
-
-//add on click event to reset button
-reset.addEventListener('click', () => {
-  resetGrid();
-});
-
 //declare function to add event listener when mouse is over squares
 function mouseOver () {
-  //declare variable with nodelist of elements including "square" class
   const squares = document.querySelectorAll('.square');
 
-  //change background color when mouse hovers elements to each element in nodelist
   squares.forEach(square => {
     square.addEventListener('mouseover', () => {
       square.style.backgroundColor = color;
@@ -93,15 +97,4 @@ function mouseOver () {
   });
 }
 
-//pick random color when clicking rainbow button
-const rainbowButton = document.getElementById('rainbow');
-rainbowButton.addEventListener('click', () => {
-  const randomColor = getRandomColor();
-  color = randomColor;
-});
-
-//pick original green when clicking green button
-const greenButton = document.getElementById('green');
-greenButton.addEventListener('click', () => {
-  color = '#aac179';
-});
+createGrid(sideLength);
